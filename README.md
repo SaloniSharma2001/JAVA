@@ -292,4 +292,21 @@ https://medium.com/@amitvsolutions/jvm-part-6-garbage-collection-a24f6ef5b3ba
 https://www.scientecheasy.com/2020/06/instance-block-in-java.html/
 
 
-
+<h3>JAVA Record</h3>
+<ul>
+<li>Every record extends java.lang.Record</li>
+<li>Record classes can not extend other classes/records.</li>
+<li>Records are final. So they can NOT be extended.</li>
+<li>Records do NOT have setter methods.</li>
+<li>Records are meant to be data carriers.</li>
+<li>Compiler generated the followings for us. 
+<ul>
+<li>a constructor</li>
+<li>equals/toString/hashCode</li>
+<li>getter methods (name exactly like the fields)</li>
+</ul>
+</li>
+<li>These fields are called record components</li>
+<li>They become private final fields of the compiled class.</li>
+<li>Two instances of a record are equal only if all of their components are equal.</li>
+</ul>
