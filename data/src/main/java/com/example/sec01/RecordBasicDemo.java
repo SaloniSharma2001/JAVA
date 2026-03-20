@@ -6,6 +6,14 @@ public class RecordBasicDemo {
 private static final Logger log = Logger.getLogger(RecordBasicDemo.class.getName());
 
 public record Person(String firstName, String lastName) {
+    //We cannot sneak in and extra field inside the record later, it should be declared as the record component if it belong to a record.
+    //Will not work. 
+    //private String middleName;
+    
+    //But we can add instance methods like
+    public String fullName(){
+        return this.firstName + " " + this.lastName;
+    }
 }
 
 public static void main(String[] args) {
